@@ -1,0 +1,16 @@
+{
+  "name": "devvox-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ruben Oostinga <roostinga@ebay.com>",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "workbox-cli": "^3.6.3"
+  }
+}
