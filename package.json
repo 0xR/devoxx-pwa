@@ -1,16 +1,22 @@
 {
-  "name": "devvox-pwa",
+  "name": "devoxx-pwa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server dvbe18.confinabox.com -c-1",
+    "build": "workbox injectManifest workbox-config.js",
+    "build:watch": "nodemon -w src/sw.js -w dvbe18.confinabox.com -e html,webmanifest -w workbox-config.js -x npx workbox injectManifest workbox-config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Ruben Oostinga <roostinga@ebay.com>",
+  "author": "Ruben Oostinga <roostinga@xebia.com>",
   "license": "ISC",
   "dependencies": {
     "http-server": "^0.11.1",
     "workbox-cli": "^3.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
   }
 }
