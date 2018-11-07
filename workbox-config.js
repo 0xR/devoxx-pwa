@@ -4,7 +4,9 @@ module.exports = {
     "**/*.{css,png,eot,eot?,svg,ttf,woff,1,js,ico}",
     "index.html",
     "offline.html",
-    "icons/*"
+    "icons/*",
+    "byday/*.html",
+    "talks/*.html"
   ],
   "swDest": "dvbe18.confinabox.com/sw.js",
   "swSrc": "src/sw.js"
