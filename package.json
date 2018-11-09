@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server dvbe18.confinabox.com -c-1",
+    "start": "run-p serve build:watch",
+    "serve": "http-server dvbe18.confinabox.com -c-1",
     "build": "workbox injectManifest workbox-config.js",
-    "build:watch": "nodemon -w src/sw.js -w dvbe18.confinabox.com -e html,webmanifest,js -w workbox-config.js -i dvbe18.confinabox.com/sw.js -x npx workbox injectManifest workbox-config.js",
+    "build:watch": "nodemon -w src/sw.js -w dvbe18.confinabox.com -e html,webmanifest,js -w workbox-config.js -i dvbe18.confinabox.com/sw.js -x npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "netlify deploy -d dvbe18.confinabox.com"
+    "deploy": "netlify deploy -d dvbe18.confinabox.com --prod"
   },
   "keywords": [],
   "author": "Ruben Oostinga <roostinga@xebia.com>",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "netlify-cli": "^2.2.1",
-    "nodemon": "^1.18.5"
+    "nodemon": "^1.18.5",
+    "npm-run-all": "^4.1.3"
   }
 }
